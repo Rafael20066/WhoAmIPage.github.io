@@ -1,83 +1,104 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
+<head>
+<title>Who Am I</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
-  <head>
-    <meta charset="utf-8">
-    <title>Who Am I Page</title>
-  <meta name="auhtor" content="Raafat Omar">
-  <meta name="description" content="Introductory Of Who Am I"> <!--Webpage Desciption-->
-  <meta name="keywords" content="Learning, Tag, HTML, Layout">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-  <style>div {//border: thin dotted red;} </style>
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
 
-<li style="background-color:Red;">
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
 
-  </head>
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
 
-  <body>
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
 
-    <div><header><h1 style="font-size:5.5vw;">Introductory Of Who Am I</h1></header></div>
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-    <div><h3><nav>Introduction</nav></h3></div>
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
 
-    <div>
-    <aside>
-      <p>My name is Raafat Omar. I was born October 11, 2006.</p>
-      <p>I am a proud muslim and originaly from Palestine (free Palestine). I live with a family of five including me.</p>
-      <img src="flag-palestine-wave-silk-texture-background-flag-palestine-texture-background-159395296.jpg" alt="palestine flag" style="max-width:50%;height:auto;">
-    </aside>
-  </div>
-
-<li style="background-color:#82E0AA;">
-
-    <div>
-      <section>
-        <h3 style="font-size:2.5vw;">Making Comparisions of Tags</h3>
-      <article>
-        <p>Here are the hyperlinks to the mandatory Experiment Pages</p>
-        <ol style="font-size:1vw;" type="A">
-          <li style="font-size:1.5vw"> Images Of Me  <a href="childPages/Images.html" target="_blank">Click Here</a>
-
-        </ol>
-        <p style="font-size:2.5vw;">Additional information pages</p>
-        <ul style="font-size:1.5vw;" style="list-style-type:square;">
-          <li style="font-size:1.5vw;"> My Hobbies: unordered and ordered information,  <a href="" target="_blank"></a>
-          <li style="font-size:1.5vw;"> Builing Electronics  <a href="" target="_blank"></a>
-          <li style="font-size:1.5vw;"> Lisening to Music  <a href="" target="_blank"></a>
-          <li > Working Out <a href="" target="_blank"></a>
-          <li style="font-size:1.5vw;"> Riding E Bikes and/or Motorcycles <a href="" target="_blank"></a>
-          <li > Binge Watching <a href="" target="_blank"></a>
-          <li style="font-size:1.5vw;"> Relaxing By Myself <a href="" target="_blank"></a>
-        </ul>
-      </article>
-    </section>
-  </div>
-
-  </body>
-
-<aside>
-
-<p style="font-size:2.5vw;"> My Future Career, </p>
-<li style="font-size:1.5vw;"> Real Estate Lawyer <a href="" target"_blank">
-
-<><>
-</aside>
-
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
 </style>
+</head>
+<body>
 
-  <footer>
-    <!-- Date Accessed: 20210916-->
-    <blockquote cite="https://www.brainyquote.com/quotes/jayz_416392?src=t_cool">
-      <p><em>I'm a mirror. If you're cool with me, I'm cool with you, and the exchange starts. What you see is what you reflect. If you don't like what you see, then you've done something. If I'm standoffish, that's because you are.</em></p>
-      <p>
-        <strong>
-          <a href="https://www.brainyquote.com/quotes/jayz_416392?src=t_cool" target="_blank">
-            Jay-Z
-          </a>
-        </strong>
-      </p>
-    <p>&copy Raafat Omar, powered by Rafael20066 in github</p>
-  </footer>
+<h2>CSS Layout Float</h2>
+<p>In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will stack on top of each other.</p>
+<p>Resize the browser window to see the responsive effect (you will learn more about this in our next chapter - HTML Responsive.)</p>
+
+<header>
+  <h2>Cities</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">London</a></li>
+      <li><a href="#">Paris</a></li>
+      <li><a href="#">Tokyo</a></li>
+    </ul>
+  </nav>
+
+  <article>
+    <h1>London</h1>
+    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+  </article>
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
 
 </html>
